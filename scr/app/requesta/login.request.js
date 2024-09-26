@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-export const AuthUserRequest = Joi.object({
+export const LoginUserRequest = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().min(6).required(),
 });

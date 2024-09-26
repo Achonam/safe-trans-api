@@ -31,7 +31,7 @@ app.get("/health", (req, res) => {
   return res.json({ success: true, message: "Server is running" });
 });
 app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/books", ticketRouter);
+app.use("/api/v1/ticket", ticketRouter);
 
 app.use("*", (req, res) => {
   throw new NotFoundError(
